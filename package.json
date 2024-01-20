@@ -1,0 +1,14 @@
+{
+    "scripts": {
+        "setup": "npm run install-three && npm run install-vite && npm run start-vite",
+        "install-three": "npm install --save three",
+        "install-vite": "npm install --save-dev vite",
+        "start-vite": "npx vite"
+    },
+    "devDependencies": {
+        "vite": "^2.9.17"
+    },
+    "dependencies": {
+        "three": "^0.160.0"
+    }
+}
