@@ -1,7 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
 * { 
     overflow: hidden;
 }
 
 body { 
     margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.text {
+    position: absolute;
+    font-size: 2rem;
+    border: 2px solid darkgray;
+    padding: 15px;
+    color: darkgray;
+    display: none;
+    border-radius: 10px;
+    font-family: "Inconsolata", monospace;
 }

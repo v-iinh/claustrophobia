@@ -41,6 +41,21 @@ scene.add(directionalLight);
 
 const onMouseMove = (event) => {
     if (controls.isLocked) {
+        const btn = document.getElementById('text');
+        btn.style.opacity = '0';
+        btn.style.display = 'flex';
+    
+        setTimeout(() => {
+            let opacityValue = 0;
+            const fadeInInterval = setInterval(() => {
+                if (opacityValue < 1) {
+                    opacityValue += 0.5;
+                    btn.style.opacity = opacityValue;
+                } else {
+                    clearInterval(fadeInInterval);
+                }
+            }, 5); 
+        }, 1000); 
     }
 };
 
