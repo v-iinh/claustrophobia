@@ -1,7 +1,5 @@
 import * as THREE from 'three';
-import {
-    OrbitControls
-} from 'three/addons/controls/OrbitControls.js';
+import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
 
 const pointsUI = document.querySelector("#points");
 let points = 0;
@@ -23,6 +21,14 @@ const moveObstacles = (arr, speed, maxX, minX, maxZ, minZ) => {
 const updateScore = () => {
     points += 1;
     pointsUI.textContent = points;
+}
+
+function playMusic() {
+    const score = parseInt(document.getElementById('points').textContent, 10);
+    if (score !== 0) {
+        const backgroundMusic = document.getElementById('backgroundMusic');
+        backgroundMusic.play();
+    }
 }
 
 const scene = new THREE.Scene();
@@ -75,6 +81,14 @@ function animate() {
 
 
     for (let i = 0; i < powerups.length; i++) {
+		if(checkCollision(player, powerups[i]) && points <= 150){
+			document.getElementById('ui').style.display = 'none'
+			document.getElementById('endgame').style.display = 'flex'
+		}
+		if(points >= 500){
+			document.getElementById('ui').style.display = 'none'
+			document.getElementById('endgame0').style.display = 'flex'
+		}
         if (checkCollision(player, powerups[i])) {
 			points = Math.round(points / 2);
             pointsUI.textContent = points;
@@ -82,8 +96,10 @@ function animate() {
             powerups[i].position.x = randomRangeNum(8, -8);
             powerups[i].position.z = randomRangeNum(-5, -10);
         }
+
     }
 
+	playMusic();
     controls.update();
     renderer.render(scene, camera);
 }

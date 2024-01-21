@@ -74,3 +74,10 @@ const animate = () => {
 };
 
 animate();
+
+document.addEventListener('click', () => {
+    if(event.button === 0){
+        const voiceAudio = document.getElementById('backgroundMusic');
+        voiceAudio.play();
+    }
+});
