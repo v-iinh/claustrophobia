@@ -84,10 +84,12 @@ function animate() {
 		if(checkCollision(player, powerups[i]) && points <= 150){
 			document.getElementById('ui').style.display = 'none'
 			document.getElementById('endgame').style.display = 'flex'
+            player.position.y = -50
 		}
 		if(points >= 500){
 			document.getElementById('ui').style.display = 'none'
 			document.getElementById('endgame0').style.display = 'flex'
+            player.position.y = -50
 		}
         if (checkCollision(player, powerups[i])) {
 			points = Math.round(points / 2);
