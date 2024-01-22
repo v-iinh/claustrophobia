@@ -36,7 +36,11 @@ Terminal Commands
 
 ## Instructions
 
-Avoid obstacles by pressing either the A or D key to move. Right clicking transfers a player between the game and the homepage. Left clicking changes the camera position around the player. Points grow higher the longer a player survives, and lower if they hit an obstacle. Players will lose if they hit an obstacle while under 200 points, and win once they reach 500. 
+- Avoid obstacles by pressing either the A or D key for movement.
+- Right clicking transfers a player between the game and the homepage.
+- Left clicking changes the camera position around the player.
+- Points grow higher the longer a player survives, and lower if they hit an obstacle.
+- Players will lose if they hit an obstacle while under 200 points, and win once they reach 500. 
 
 ## Licenses
 
