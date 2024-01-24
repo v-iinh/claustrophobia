@@ -62,7 +62,7 @@ const onMouseMove = (event) => {
 document.addEventListener('mousedown', (event) => {
     if (event.button === 2) {
         event.preventDefault();
-        window.location.href = 'game/game.html';
+        window.location.href = 'game/index.html';
     }
 });
 

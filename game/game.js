@@ -1,3 +1,5 @@
+console.log('start');
+
 import * as THREE from 'three';
 import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
 
@@ -30,6 +32,8 @@ function playMusic() {
         backgroundMusic.play();
     }
 }
+
+console.log('middle');
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -71,6 +75,7 @@ function checkCollision(object1, object2) {
     let box1 = new THREE.Box3().setFromObject(object1);
     let box2 = new THREE.Box3().setFromObject(object2);
     const collision = box1.intersectsBox(box2);
+    console.log("Collision:", collision);
     return collision;
 }
 
